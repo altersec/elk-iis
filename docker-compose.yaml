@@ -3,6 +3,7 @@ services:
     image: sebp/elk
     volumes:
       - ./logs:/logs:cached,noatime,ro
+      - ./exported:/exported
       - ./iis.conf:/etc/logstash/conf.d/iis.conf
       - ./pipelines.yml:/opt/logstash/config/pipelines.yml
     ports: 
